@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Sonia Line pour réserver un cours particulier de grec.">
+  <title>Contact | Sonia Line - Cours de grec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-contact">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigation principale">
+      <a class="logo" href="index.html"><span class="logo-mark">Σ</span><span>Sonia Line</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+        <span class="sr-only">Ouvrir le menu</span><span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="main-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="lessons.html">Cours</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero-contact">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Contact</p>
+        <h1>Réserver un cours d’essai</h1>
+        <p>Présentez votre niveau, votre objectif et vos disponibilités. Sonia Line pourra vous répondre avec une proposition adaptée.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label for="level">Niveau de grec</label>
+            <select id="level" name="level">
+              <option value="">Choisir un niveau</option>
+              <option>Débutant</option>
+              <option>Intermédiaire</option>
+              <option>Avancé</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="goal">Objectif d’apprentissage</label>
+            <input type="text" id="goal" name="goal" placeholder="Voyage, conversation, culture...">
+          </div>
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Expliquez votre projet en quelques mots"></textarea>
+          </div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+        </form>
+
+        <aside class="contact-card reveal" aria-label="Coordonnées">
+          <h2>Coordonnées</h2>
+          <p><strong>Email</strong><br>contact@sonialine-grec.example</p>
+          <p><strong>Lieu</strong><br>France et cours en ligne</p>
+          <p><strong>Public</strong><br>Adultes débutants, voyageurs et passionnés de culture grecque.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="index.html"><span class="logo-mark">Σ</span><span>Sonia Line</span></a><p>Contact pour cours particuliers de grec.</p></div>
+      <div><h2>Navigation</h2><ul><li><a href="index.html">Accueil</a></li><li><a href="about.html">À propos</a></li><li><a href="lessons.html">Cours</a></li><li><a href="culture.html">Culture</a></li></ul></div>
+      <div><h2>Contact</h2><p>Email : contact@sonialine-grec.example</p><p>France et cours en ligne</p></div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
