@@ -331,7 +331,7 @@ p {
 
 .portrait-photo {
   position: absolute;
-  inset: 44px 44px 92px;
+  inset: 44px;
   overflow: hidden;
   border-radius: var(--radius);
   background:
@@ -361,25 +361,6 @@ p {
 
 .portrait-photo.is-missing .portrait-fallback {
   display: grid;
-}
-
-.visual-note {
-  position: absolute;
-  left: 34px;
-  right: 34px;
-  bottom: 26px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.visual-note span {
-  padding: 0.45rem 0.65rem;
-  border-radius: 999px;
-  background: rgba(250, 243, 230, 0.88);
-  color: var(--color-blue);
-  font-size: 0.82rem;
-  font-weight: 700;
 }
 
 .about-photo {
