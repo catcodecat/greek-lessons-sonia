@@ -115,3 +115,82 @@ Il est aussi possible d'utiliser un petit serveur local si l'environnement le pe
 ## État actuel
 
 Cette première version permet de présenter le projet au professeur et de montrer le travail déjà commencé. Le site fonctionne en ligne sur Netlify, mais il reste une version de travail qui sera améliorée progressivement.
+
+## Version fonctionnelle avec backend
+
+Le projet contient maintenant un backend Node.js + Express et une base de données SQLite pour enregistrer les demandes.
+
+### Installation
+
+```bash
+npm install
+```
+
+### Lancement
+
+```bash
+npm start
+```
+
+Le site est ensuite disponible sur :
+
+```text
+http://127.0.0.1:4173
+```
+
+La base SQLite est créée automatiquement dans :
+
+```text
+data/app.sqlite
+```
+
+### Routes API
+
+```text
+POST /api/bookings
+```
+
+Enregistre une demande de réservation de cours.
+
+Champs attendus :
+
+- `name`
+- `email`
+- `level`
+- `goal`
+- `message`
+
+```text
+GET /api/bookings
+```
+
+Retourne la liste des réservations.
+
+```text
+POST /api/contacts
+```
+
+Enregistre un message de contact.
+
+Champs attendus :
+
+- `name`
+- `email`
+- `subject`
+- `message`
+
+```text
+GET /api/contacts
+```
+
+Retourne la liste des messages de contact.
+
+### Administration
+
+La page d'administration est disponible sur :
+
+```text
+http://127.0.0.1:4173/admin.html
+```
+
+Elle affiche les réservations et les messages enregistrés dans SQLite.

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Administration des demandes de cours et messages de contact.">
+  <title>Administration | Sonia Line - Cours de grec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260607-admin">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigation principale">
+      <a class="logo" href="index.html"><span class="logo-mark">Σ</span><span>Sonia Line</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+        <span class="sr-only">Ouvrir le menu</span><span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="main-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="lessons.html">Cours</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow reveal">
+        <p class="eyebrow">Administration</p>
+        <h1>Demandes reçues</h1>
+        <p>Consultez les réservations de cours et les messages enregistrés dans la base SQLite.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container admin-dashboard">
+        <article class="contact-card reveal">
+          <h2>Réservations</h2>
+          <div class="admin-list" id="bookings-list" aria-live="polite">
+            <p>Chargement des réservations...</p>
+          </div>
+        </article>
+
+        <article class="contact-card reveal">
+          <h2>Messages de contact</h2>
+          <div class="admin-list" id="contacts-list" aria-live="polite">
+            <p>Chargement des messages...</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="index.html"><span class="logo-mark">Σ</span><span>Sonia Line</span></a><p>Administration pédagogique du projet.</p></div>
+      <div><h2>Navigation</h2><ul><li><a href="index.html">Accueil</a></li><li><a href="lessons.html">Cours</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h2>Projet</h2><p>Backend Express et base SQLite.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

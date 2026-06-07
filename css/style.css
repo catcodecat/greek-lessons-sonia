@@ -726,6 +726,28 @@ textarea:focus {
   background: var(--color-sand);
 }
 
+.admin-dashboard {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.admin-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-item {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(11, 79, 113, 0.14);
+}
+
+.admin-item h3,
+.admin-item p {
+  margin-bottom: 0.35rem;
+}
+
 .site-footer {
   padding: 2.5rem 0;
   background: var(--color-blue-dark);
@@ -878,5 +900,14 @@ textarea:focus {
 
   .footer-grid {
     grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .admin-dashboard {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .admin-item {
+    grid-template-columns: 1fr auto;
   }
 }
