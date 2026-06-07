@@ -383,7 +383,6 @@ p {
 }
 
 .about-photo {
-  min-height: 320px;
   border-radius: var(--radius);
   background: var(--color-stone);
   position: relative;
@@ -391,7 +390,8 @@ p {
 }
 
 .about-collage {
-  min-height: 520px;
+  display: grid;
+  gap: 0.85rem;
   padding: 1rem;
   background:
     linear-gradient(135deg, rgba(250, 243, 230, 0.92), rgba(244, 228, 201, 0.82)),
@@ -409,11 +409,13 @@ p {
 }
 
 .about-collage-frame {
-  position: absolute;
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   border: 6px solid rgba(255, 249, 239, 0.94);
   border-radius: var(--radius);
   box-shadow: 0 18px 38px rgba(30, 58, 95, 0.2);
+  aspect-ratio: 5 / 4;
 }
 
 .about-collage-frame img {
@@ -424,26 +426,19 @@ p {
 }
 
 .about-collage-main {
-  left: 32px;
-  top: 46px;
-  z-index: 1;
-  width: 62%;
-  height: 74%;
+  aspect-ratio: 4 / 5;
 }
 
-.about-collage-side {
-  right: 32px;
-  z-index: 2;
-  width: 42%;
-  aspect-ratio: 5 / 4;
+.about-collage-main img {
+  object-position: center 42%;
 }
 
-.about-collage-top {
-  top: 30px;
+.about-collage-top img {
+  object-position: center 46%;
 }
 
-.about-collage-bottom {
-  bottom: 38px;
+.about-collage-bottom img {
+  object-position: center 42%;
 }
 
 .section {
@@ -814,7 +809,12 @@ textarea:focus {
   }
 
   .about-collage {
-    min-height: 560px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-collage-main {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -855,10 +855,21 @@ textarea:focus {
 
   .about-collage {
     grid-row: span 2;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    min-height: 520px;
+  }
+
+  .about-collage-main {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    aspect-ratio: auto;
   }
 
   .about-collage-side {
-    width: 34%;
+    aspect-ratio: auto;
+    min-height: 0;
   }
 
   .section {
