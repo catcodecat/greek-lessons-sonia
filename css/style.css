@@ -449,6 +449,20 @@ p {
   font-weight: 700;
 }
 
+.legal-content {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.legal-content article {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(11, 79, 113, 0.12);
+}
+
+.legal-content article:last-child {
+  border-bottom: 0;
+}
+
 .card-grid {
   display: grid;
   gap: 1rem;
