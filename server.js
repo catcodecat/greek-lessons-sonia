@@ -10,7 +10,14 @@ const {
 const app = express();
 const port = Number(process.env.PORT) || 4173;
 
-app.use(express.json());
+app.use((req, res, next) => {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  next();
+});
+
+app.use(express.json({ limit: "20kb" }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname));
 
@@ -102,6 +109,15 @@ app.get("/admin", (req, res) => {
 
 app.use("/api", (req, res) => {
   res.status(404).json({ message: "Route API introuvable." });
+});
+
+app.use((err, req, res, next) => {
+  if (err instanceof SyntaxError && "body" in err) {
+    return res.status(400).json({ message: "JSON invalide." });
+  }
+
+  console.error(err);
+  return res.status(500).json({ message: "Erreur serveur." });
 });
 
 app.listen(port, () => {
