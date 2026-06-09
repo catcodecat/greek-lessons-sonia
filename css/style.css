@@ -463,6 +463,12 @@ p {
   border-bottom: 0;
 }
 
+.legal-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  color: var(--color-muted);
+}
+
 .card-grid {
   display: grid;
   gap: 1rem;
