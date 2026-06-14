@@ -449,6 +449,58 @@ p {
   font-weight: 700;
 }
 
+@media (max-width: 520px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: min(100% - 2rem, 1120px);
+  }
+
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .hero-grid,
+  .split,
+  .contact-grid {
+    min-width: 0;
+  }
+
+  .hero-content,
+  .text-block,
+  .section-heading {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-content h1,
+  .section h2 {
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .button-group {
+    display: grid;
+  }
+
+  .button-group .btn {
+    min-width: 0;
+    width: 100%;
+    white-space: normal;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+    max-width: 100%;
+  }
+
+  .portrait-photo {
+    inset: 24px;
+  }
+}
+
 .legal-content {
   display: grid;
   gap: 1.4rem;
