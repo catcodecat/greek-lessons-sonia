@@ -895,6 +895,12 @@ textarea:focus {
   }
 }
 
+@media (min-width: 700px) and (max-width: 919px) {
+  .portrait-photo img {
+    object-position: center 32%;
+  }
+}
+
 @media (min-width: 920px) {
   .menu-toggle {
     display: none;
