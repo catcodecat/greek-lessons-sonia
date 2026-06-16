@@ -8,6 +8,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/home-bg.webp">
+  <link rel="preload" as="image" href="images/sonia-3.webp">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css?v=20260607-hero">
 </head>
@@ -48,7 +50,10 @@
         </div>
         <div class="hero-visual portrait-composition reveal">
           <div class="portrait-photo">
-            <img src="images/sonia-3.jpg" alt="Portrait de Sonia Line en Grèce" onerror="this.closest('.portrait-photo').classList.add('is-missing'); this.remove();">
+            <picture>
+              <source srcset="images/sonia-3.webp" type="image/webp">
+              <img src="images/sonia-3.jpg" width="960" height="768" alt="Portrait de Sonia Line en Grèce" decoding="async" fetchpriority="high" onerror="this.closest('.portrait-photo').classList.add('is-missing'); this.remove();">
+            </picture>
             <div class="portrait-fallback" aria-hidden="true">Sonia Line</div>
           </div>
         </div>
